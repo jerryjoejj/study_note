@@ -52,6 +52,7 @@ strList的引用不可以被赋值，但是strList对象的行为不受影响。
 仅仅提供一种确保对象被finalize之后做某些事情的机制。可以用幻象引用监控对象的创建和销毁。
 ## 对象可达性状态流转分析
 下图为对象生命周期和不同可达性状态，以及不同状态可能的改变关系：
+
 ![2018-12-28.21.11.01-对象创建过程.png](https://raw.githubusercontent.com/jerryjoejj/yosoro-pic/master/img/2018-12-28.21.11.01-%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B.png)
 ## Java对象不同可达性级别
 ### 强可达：Strongly Reachable
@@ -68,3 +69,9 @@ strList的引用不可以被赋值，但是strList对象的行为不受影响。
 ## 引用队列(Reference Quece)使用
 ## 显示影响软引用垃圾收集
 使用-XX:SoftRefLRUPolicyMSPerMB参数控制软引用垃圾收集，最终取决了JVM的实现。
+# 第五讲 String、StringBuffer、StringBuilder区别
+## 三者区别
+- String是典型的Immutable类，被声明为final class，所有属性也是final的。由于它的不可变性，类似拼接、裁剪字符串的方法都将会创建新的的String对象。
+- StringBulider为解决String在拼接过程中产生过多的中间对象而设计的一个类，使用append或者app方法，将字符串添加到已有序列的末尾或者指定位置。StringBuilder本质上是线程安全的可修改的字符序列。StringBuilder通过synchronized实现线程安全，性能开销大。
+- StringBuffer能力上基本上和StringBuilder一样，但是StringBuffer是线程不安全的。
+
