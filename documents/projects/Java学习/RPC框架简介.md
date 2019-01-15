@@ -23,7 +23,7 @@ RPC采用客户端（服务调用方）/服务端（服务提供方）模式，�
 常见RPC框架方案有RMI（JDK自带），Hessian，Dubbo，Hprose，Thrift，HTTP等
 ## RMI
 ### RMI调用过程
-![2019-01-15.15.54.19-image.png](https://raw.githubusercontent.com/jerryjoejj/yosoro-pic/master/img/2019-01-15.15.54.19-image.png)
+![2019-01-15.17.23.19-6401.png](https://raw.githubusercontent.com/jerryjoejj/yosoro-pic/master/img/2019-01-15.17.23.19-6401.png)
 - 1.服务端向RMI注册服务绑定自己的地址
 - 2.客户端通过RMI注册服务获取目标地址
 - 3.客户端调用本地stub对象上的方法，与调用本地方法一致
@@ -87,5 +87,5 @@ public class RmiClient {
 }
 ```
 ## Dubbo
-Dubbo架构
-![Uploading 15475433271902]()
+Dubbo架构<br>
+![2019-01-15.17.08.47-image.png](https://raw.githubusercontent.com/jerryjoejj/yosoro-pic/master/img/2019-01-15.17.08.47-image.png)
