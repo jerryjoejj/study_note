@@ -3,11 +3,7 @@
 - Channels
 - Buffers
 - Selectors
-<<<<<<< HEAD
 ### Channel和Buffer
-=======
-## Channel和Buffer
->>>>>>> 0ce6e939a0d56ecdde69d554bc736f748e672fa2
 ![20190122230739-image.png](https://raw.githubusercontent.com/jerryjoejj/yosoro-pic/master/img/20190122230739-image.png)
 
 主要Channel实现
@@ -33,11 +29,7 @@ Selector允许单线程处理多个Channel。
 
 要使用Selector需要Selector注册Channel
 
-<<<<<<< HEAD
 ### Channel实例
-=======
-## Channel实例
->>>>>>> 0ce6e939a0d56ecdde69d554bc736f748e672fa2
 ```java
     public void testChannel() throws IOException {
         // 读取文件
@@ -50,11 +42,7 @@ Selector允许单线程处理多个Channel。
         int read = fileChannel.read(byteBuffer);
         while (read != -1) {
             System.out.println("Read" + read);
-<<<<<<< HEAD
             // 反转Buffer，将Buffer变成可读模式
-=======
-            // 反转Buffer
->>>>>>> 0ce6e939a0d56ecdde69d554bc736f748e672fa2
             byteBuffer.flip();
             while (byteBuffer.hasRemaining()) {
                 System.out.println((char) byteBuffer.get());
@@ -64,7 +52,6 @@ Selector允许单线程处理多个Channel。
             read = fileChannel.read(byteBuffer);
         }
     }
-<<<<<<< HEAD
 ```
 # Buffer
 Java NIO的Buffer用于和NIO通道进行交互，数据从通道读入缓冲区，从缓冲区写入通道
@@ -129,6 +116,4 @@ int bytesWritten = inChannel.write(buf);
 - 2.使用get()方法从Buffer中读取数据
 ```java
 byte aByte = buf.get();
-=======
->>>>>>> 0ce6e939a0d56ecdde69d554bc736f748e672fa2
 ```
